@@ -48,7 +48,11 @@ export function Hero() {
                 and on time.
               </p>
             </div>
-         
+            <div className="motion-reveal motion-delay-2 pb-3 sm:pb-4">
+              <button className="public-sans apple-button rounded-2xl bg-[#395B50] px-5 py-3 text-sm font-medium text-white hover:-translate-y-0.5 hover:bg-[#2f4f45] sm:px-6 sm:py-4 sm:text-base">
+                Get Compliant
+              </button>
+            </div>
           </div>
         </div>
       </div>
