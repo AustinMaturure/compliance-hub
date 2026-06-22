@@ -1,4 +1,13 @@
 export function ServiceCards() {
+  const cardBgClasses = [
+    "bg-violet-50",
+    "bg-sky-50",
+    "bg-emerald-50",
+    "bg-amber-50",
+    "bg-rose-50",
+    "bg-indigo-50",
+  ];
+
   const services = [
     {
       title: "Accounting & Financial Reporting",
@@ -38,8 +47,11 @@ export function ServiceCards() {
         <div className="autoscroll-track">
           {[0, 1].map((group) => (
             <div className="autoscroll-group" key={group} aria-hidden={group === 1}>
-              {services.map((service) => (
-                <div key={`${service.title}-${group}`} className="service-card bg-white p-8 rounded-lg min-h-96 flex flex-col justify-between">
+              {services.map((service, index) => (
+                <div
+                  key={`${service.title}-${group}`}
+                  className={`service-card motion-reveal lift-card ${cardBgClasses[index % cardBgClasses.length]} min-h-96 rounded-lg p-8 flex flex-col justify-between`}
+                >
                   <h3 className="text-2xl font-bold">{service.title}</h3>
                   <p className="text-gray-600">{service.description}</p>
                 </div>

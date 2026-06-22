@@ -1,18 +1,18 @@
-import compliance from '../assets/compliance.jpeg';
 import { ComplianceCards } from '../components/compliance-cards';
 
 export function ComplianceSection() {
   return (
-    <section className="container mx-auto px-4 py-12">
-     <div className='flex relative items-center'>
-        <div className='flex-1'> 
-            <h1 className=' absolute top-[10px] left-[40%] text-2xl font-bold bg-black text-white px-4 py-2 rounded-2xl w-fit'>Compliance Checklist</h1>
-            <ComplianceCards />
+    <section id="compliance" className="py-8 text-neutral-900 md:py-24">
+      <div className="container mx-auto grid gap-12 px-4 lg:grid-cols-[minmax(260px,360px)_1fr] lg:items-start lg:gap-20">
+        <div className="motion-reveal max-w-[320px]">
+          <h1 className="text-6xl font-medium leading-[0.9] tracking-tight md:text-7xl">
+          Compliance Checklist
+          </h1>
         </div>
-        <div className='flex-1'> 
-            <img src={compliance} alt="Compliance" className='object-cover w-full h-full rounded-lg' />
+        <div className="motion-reveal motion-delay-1 w-full">
+          <ComplianceCards />
         </div>
-     </div>
+      </div>
     </section>
-  )
+  );
 }

@@ -3,7 +3,7 @@
 :root {
   --text: #08060d ;
   --text-h: #08060d;
-  --bg: #fbfaf8;
+  --bg: #fefefe;
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
   --accent: #aa3bff;
@@ -16,6 +16,8 @@
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
+  --apple-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --apple-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
@@ -31,6 +33,94 @@
   @media (max-width: 1024px) {
     font-size: 16px;
   }
+}
+
+a,
+button,
+input,
+textarea {
+  transition:
+    color 320ms var(--apple-ease),
+    background-color 320ms var(--apple-ease),
+    border-color 320ms var(--apple-ease),
+    box-shadow 460ms var(--apple-ease),
+    transform 460ms var(--apple-ease);
+}
+
+.motion-reveal {
+  opacity: 0;
+  transform: translateY(22px) scale(0.985);
+  transition:
+    opacity 880ms var(--apple-ease-out),
+    transform 980ms var(--apple-ease);
+  transition-delay: var(--motion-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.motion-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.motion-delay-1 {
+  --motion-delay: 140ms;
+}
+
+.motion-delay-2 {
+  --motion-delay: 240ms;
+}
+
+.motion-delay-3 {
+  --motion-delay: 320ms;
+}
+
+.lift-card {
+  transition:
+    transform 520ms var(--apple-ease),
+    box-shadow 620ms var(--apple-ease),
+    border-color 420ms var(--apple-ease);
+}
+
+.lift-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 45px -28px rgba(0, 0, 0, 0.35);
+}
+
+.nav-shell {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  border-bottom: 1px solid color-mix(in oklab, var(--border) 84%, transparent);
+  background: color-mix(in oklab, var(--bg) 88%, transparent);
+  backdrop-filter: blur(12px) saturate(140%);
+}
+
+.hero-media {
+  transform: scale(1.02);
+  transition: transform 2.1s var(--apple-ease);
+}
+
+.hero-media:hover {
+  transform: scale(1.045);
+}
+
+.apple-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.apple-button::after {
+  content: "";
+  position: absolute;
+  inset: -120% auto -120% -32%;
+  width: 36%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+  transform: translateX(-210%) rotate(16deg);
+  transition: transform 1.35s var(--apple-ease);
+}
+
+.apple-button:hover::after {
+  transform: translateX(510%) rotate(16deg);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -60,7 +150,7 @@
 .autoscroll-track {
   display: flex;
   width: max-content;
-  animation: autoScroll 60s linear infinite;
+  animation: autoScroll 78s linear infinite;
 }
 
 .autoscroll-group {
@@ -83,5 +173,108 @@
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+.why-autoscroll {
+  overflow: hidden;
+  width: 100%;
+}
+
+.why-autoscroll-track {
+  display: flex;
+  width: max-content;
+  animation: whyFlow 58s linear infinite;
+}
+
+.why-autoscroll-group {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.why-autoscroll:hover .why-autoscroll-track {
+  animation-play-state: paused;
+}
+
+.why-text-item {
+  flex: 0 0 auto;
+  font-size: clamp(1.5rem, 1.35vw, 1.2rem);
+  line-height: 1.2;
+  color: color-mix(in oklab, var(--text) 78%, #395b50 22%);
+  white-space: nowrap;
+}
+
+.why-text-item::after {
+  content: "•";
+  margin-left: 2.5rem;
+  color: #395b50;
+  opacity: 0.55;
+}
+
+@keyframes whyFlow {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.credentials-scroll {
+  overflow: hidden;
+  width: 100%;
+}
+
+.credentials-scroll-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 1.75rem;
+  animation: credentialsFlow 30s linear infinite;
+}
+
+.credentials-scroll-item {
+  flex: 0 0 8.5rem;
+  height: 4rem;
+}
+
+.credentials-logo {
+  opacity: 0.9;
+  transition:
+    opacity 320ms var(--apple-ease),
+    transform 360ms var(--apple-ease),
+    filter 320ms var(--apple-ease);
+}
+
+.credentials-logo:hover {
+  opacity: 1;
+  transform: translateY(-4px);
+  filter: grayscale(0) brightness(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .motion-reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes credentialsFlow {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 0.875rem));
   }
 }

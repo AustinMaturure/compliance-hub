@@ -1,0 +1,11 @@
+.cabinet{
+    font-family: 'Cabinet Grotesk', sans-serif;
+}
+
+.public-sans{
+    font-family: 'Public Sans', sans-serif;
+}
+
+body{
+    scroll-behavior: smooth;
+}
