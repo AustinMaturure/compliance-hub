@@ -1,4 +1,4 @@
-import more from '../assets/more-left.jpg';
+import more from '../assets/more-left.webp';
 import { useState } from 'react';
 import type { FormEvent } from 'react';
 
