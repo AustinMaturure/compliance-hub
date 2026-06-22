@@ -1,4 +1,4 @@
-import more from '../assets/more-left.jpg';
+import more from '../assets/more-left.webp';
 import { Metrics } from '../components/metrics';
 
 export function MetricsSection() {

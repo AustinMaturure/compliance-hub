@@ -1,5 +1,5 @@
 import draftworkxLogo from '../assets/draftworx.png';
-import saipaLogo from '../assets/saipa.png';
+import saipaLogo from '../assets/saipa.webp';
 import sarsLogo from '../assets/sars-logo.png';
 
 const logos = [
