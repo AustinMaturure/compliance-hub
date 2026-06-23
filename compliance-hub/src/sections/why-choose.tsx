@@ -11,7 +11,7 @@ export function WhyChooseSection() {
   return (
     <section className="container mx-auto px-4 py-10 md:py-14">
       <div className="motion-reveal flex flex-col gap-6 border-y border-neutral-300 py-6 md:flex-row md:items-center">
-        <div className="motion-reveal md:w-[320px] md:flex-none">
+        <div className="motion-reveal text-center md:w-[320px] md:flex-none md:text-left">
           <p className="public-sans text-xs font-semibold uppercase tracking-[0.16em] text-[#395b50]">
             Why Choose
           </p>
