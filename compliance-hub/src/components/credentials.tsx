@@ -31,7 +31,7 @@ export function Credentials() {
                       <img
                         src={logo.src}
                         alt={logo.alt}
-                        className="credentials-logo h-full w-full object-contain grayscale"
+                      className="credentials-logo h-full w-full object-contain"
                       />
                     </div>
                   ))}
@@ -50,7 +50,7 @@ export function Credentials() {
               <img
                 src={logo.src}
                 alt={logo.alt}
-                className="credentials-logo h-full w-full object-contain grayscale"
+                className="credentials-logo h-full w-full object-contain"
               />
             </div>
           ))}

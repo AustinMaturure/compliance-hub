@@ -232,6 +232,9 @@ textarea {
   width: max-content;
   align-items: center;
   animation: credentialsFlow 30s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
 }
 
 .credentials-scroll-group {
@@ -248,6 +251,7 @@ textarea {
 
 .credentials-logo {
   opacity: 0.9;
+  filter: grayscale(1) brightness(0);
   transition:
     opacity 320ms var(--apple-ease),
     transform 360ms var(--apple-ease),
@@ -258,6 +262,13 @@ textarea {
   opacity: 1;
   transform: translateY(-4px);
   filter: grayscale(0) brightness(1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .credentials-logo {
+    /* Keep logos visible on dark backgrounds while preserving monochrome style */
+    filter: grayscale(1) brightness(1.65);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -278,9 +289,9 @@ textarea {
 
 @keyframes credentialsFlow {
   from {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
   to {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
   }
 }
