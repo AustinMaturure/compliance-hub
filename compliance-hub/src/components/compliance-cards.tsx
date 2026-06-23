@@ -45,7 +45,7 @@ export function ComplianceCards() {
             }`}
           >
             <p className="pt-1 text-base font-medium">{index + 1}</p>
-            <h3 className="text-[2rem] font-medium leading-[1.05] tracking-tight">{card.title},</h3>
+            <h3 className="text-[2rem] font-medium leading-[1.05] tracking-tight">{card.title}</h3>
             <p className="max-w-[360px] text-sm leading-snug text-neutral-700 md:justify-self-end">
               {card.items.join(", ")}
             </p>

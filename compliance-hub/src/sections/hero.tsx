@@ -38,14 +38,12 @@ export function Hero() {
           <div className="flex w-full flex-col gap-5 lg:gap-6">
             <div className="motion-reveal flex-1">
               <h2 className="text-4xl leading-[0.95] font-bold sm:text-6xl lg:text-8xl">
-                Compliance, <br /> Made Simple.
+                Compliance <br /> Made Simple.
               </h2>
             </div>
             <div className="public-sans motion-reveal w-full max-w-xl flex-1 pb-6 text-base sm:pb-0 sm:text-lg lg:w-[55%]">
               <p>
-                Supporting individuals and small businesses with accounting, tax,
-                payroll and compliance services that keep you organised, compliant
-                and on time.
+              Accounting, tax, payroll and compliance services for individuals and small businesses.
               </p>
             </div>
             <div className="motion-reveal motion-delay-2 hidden pb-3 sm:block sm:pb-4">

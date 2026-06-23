@@ -251,24 +251,14 @@ textarea {
 
 .credentials-logo {
   opacity: 0.9;
-  filter: grayscale(1) brightness(0);
   transition:
     opacity 320ms var(--apple-ease),
-    transform 360ms var(--apple-ease),
-    filter 320ms var(--apple-ease);
+    transform 360ms var(--apple-ease);
 }
 
 .credentials-logo:hover {
   opacity: 1;
   transform: translateY(-4px);
-  filter: grayscale(0) brightness(1);
-}
-
-@media (prefers-color-scheme: dark) {
-  .credentials-logo {
-    /* Keep logos visible on dark backgrounds while preserving monochrome style */
-    filter: grayscale(1) brightness(1.65);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

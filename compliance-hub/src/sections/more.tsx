@@ -31,7 +31,7 @@ export function MoreSection() {
         </div>
         <div className="motion-reveal motion-delay-1 flex flex-1 flex-col items-center justify-center gap-6 rounded-lg border border-black/10 p-6 md:p-10">
           <h1 className="cabinet text-center text-4xl font-bold md:text-6xl">
-            Don&apos;t be shy to talk tax with us
+          Need assistance with your compliance obligations?
           </h1>
           <form
             className="flex w-full max-w-md flex-col gap-3"
