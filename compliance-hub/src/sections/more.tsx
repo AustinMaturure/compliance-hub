@@ -42,7 +42,7 @@ export function MoreSection() {
               placeholder="Your name"
               value={name}
               onChange={(event) => setName(event.target.value)}
-              className="rounded-xl border border-black/20 px-4 py-3 text-sm outline-none transition focus:border-black"
+              className="rounded-xl border border-black/20 px-4 py-3 text-[16px] outline-none transition focus:border-black"
             />
             <input
               type="email"
@@ -50,7 +50,7 @@ export function MoreSection() {
               required
               value={email}
               onChange={(event) => setEmail(event.target.value)}
-              className="rounded-xl border border-black/20 px-4 py-3 text-sm outline-none transition focus:border-black"
+              className="rounded-xl border border-black/20 px-4 py-3 text-[16px] outline-none transition focus:border-black"
             />
             <textarea
               placeholder="How can we help?"
@@ -58,7 +58,7 @@ export function MoreSection() {
               rows={4}
               value={message}
               onChange={(event) => setMessage(event.target.value)}
-              className="resize-none rounded-xl border border-black/20 px-4 py-3 text-sm outline-none transition focus:border-black"
+              className="resize-none rounded-xl border border-black/20 px-4 py-3 text-[16px] outline-none transition focus:border-black"
             />
             <button
               type="submit"
