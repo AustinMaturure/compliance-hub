@@ -16,24 +16,28 @@ export function Credentials() {
           Aligned With Industry Standards
         </h2>
 
-        <div className="credentials-scroll md:hidden">
-          <div className="credentials-scroll-track">
-            {[0, 1].map((group) => (
-              <div className="credentials-scroll-group" key={group} aria-hidden={group === 1}>
-                {logos.map((logo) => (
-                  <div
-                    key={`${logo.alt}-${group}`}
-                    className="credentials-scroll-item"
-                  >
-                    <img
-                      src={logo.src}
-                      alt={logo.alt}
-                      className="credentials-logo h-full w-full object-contain grayscale brightness-0"
-                    />
-                  </div>
-                ))}
-              </div>
-            ))}
+        <div className="relative min-w-0 md:hidden">
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-8 bg-linear-to-r from-(--bg) to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-8 bg-linear-to-l from-(--bg) to-transparent" />
+          <div className="credentials-scroll">
+            <div className="credentials-scroll-track">
+              {[0, 1].map((group) => (
+                <div className="credentials-scroll-group" key={group} aria-hidden={group === 1}>
+                  {logos.map((logo) => (
+                    <div
+                      key={`${logo.alt}-${group}`}
+                      className="credentials-scroll-item"
+                    >
+                      <img
+                        src={logo.src}
+                        alt={logo.alt}
+                        className="credentials-logo h-full w-full object-contain grayscale"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -46,7 +50,7 @@ export function Credentials() {
               <img
                 src={logo.src}
                 alt={logo.alt}
-                className="credentials-logo h-full w-full object-contain grayscale brightness-0"
+                className="credentials-logo h-full w-full object-contain grayscale"
               />
             </div>
           ))}

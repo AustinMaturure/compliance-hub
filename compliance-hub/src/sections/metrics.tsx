@@ -11,7 +11,7 @@ export function MetricsSection() {
             alt="Metrics"
             loading="lazy"
             decoding="async"
-            className="hero-media h-[420px] w-full rounded-lg object-cover md:h-[680px]"
+            className="md:hero-media h-[420px] w-full rounded-lg object-cover md:h-[680px]"
           />
         </div>
         <div className="motion-reveal motion-delay-1 flex flex-1 flex-col justify-between">
