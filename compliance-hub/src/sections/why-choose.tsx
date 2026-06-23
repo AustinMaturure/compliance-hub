@@ -16,7 +16,7 @@ export function WhyChooseSection() {
             Why Choose
           </p>
           <h2 className="cabinet mt-2 text-3xl font-bold leading-tight md:text-5xl">
-            Compliance Hub
+            compliance hub
           </h2>
         </div>
 
