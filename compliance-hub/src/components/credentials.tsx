@@ -16,7 +16,7 @@ export function Credentials() {
           Aligned With Industry Standards
         </h2>
 
-        <div className="credentials-scroll motion-reveal motion-delay-1 md:hidden">
+        <div className="credentials-scroll md:hidden">
           <div className="credentials-scroll-track">
             {[0, 1].map((group) => (
               <div className="credentials-scroll-group" key={group} aria-hidden={group === 1}>
@@ -37,7 +37,7 @@ export function Credentials() {
           </div>
         </div>
 
-        <div className="motion-reveal motion-delay-1 hidden w-full grid-cols-3 gap-6 md:grid lg:w-auto lg:gap-6">
+        <div className="hidden w-full grid-cols-3 gap-6 md:grid lg:w-auto lg:gap-6">
           {logos.map((logo) => (
             <div
               key={logo.alt}
