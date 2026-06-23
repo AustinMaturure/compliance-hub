@@ -1,20 +1,34 @@
 import more from '../assets/contact.webp';
 import { useState } from 'react';
 import type { FormEvent } from 'react';
+import emailjs from '@emailjs/browser';
+
+type Status = 'idle' | 'sending' | 'success' | 'error';
 
 export function MoreSection() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [status, setStatus] = useState<Status>('idle');
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setStatus('sending');
 
-    const subject = encodeURIComponent(`Tax enquiry from ${name || 'Website visitor'}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-    );
-    window.location.href = `mailto:parthematurure@gmail.com?subject=${subject}&body=${body}`;
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        { from_name: name, from_email: email, message },
+        { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY },
+      );
+      setStatus('success');
+      setName('');
+      setEmail('');
+      setMessage('');
+    } catch {
+      setStatus('error');
+    }
   };
 
   return (
@@ -62,11 +76,22 @@ export function MoreSection() {
             />
             <button
               type="submit"
-              className="apple-button rounded-2xl bg-black px-6 py-4 font-bold text-white hover:-translate-y-0.5"
+              disabled={status === 'sending'}
+              className="apple-button rounded-2xl bg-black px-6 py-4 font-bold text-white hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Contact us
+              {status === 'sending' ? 'Sending…' : 'Contact us'}
             </button>
-         
+
+            {status === 'success' && (
+              <p className="text-center text-sm font-medium text-green-600">
+                Message sent! We'll be in touch soon.
+              </p>
+            )}
+            {status === 'error' && (
+              <p className="text-center text-sm font-medium text-red-500">
+                Something went wrong. Please try again.
+              </p>
+            )}
           </form>
         </div>
       </div>
