@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import logo from '../assets/logo.png';
 
 const navLinks = [
   { label: 'Home', href: '#home' },
@@ -23,8 +24,9 @@ export function Navbar() {
     <>
       <header className="cabinet nav-shell motion-reveal is-visible">
         <nav className="container mx-auto flex h-16 items-center justify-between px-4">
-          <a href="#home" className="text-xl font-bold hover:opacity-75">
-            compliance hub
+          <a href="#home" className="flex items-center ">
+            <img src={logo} alt="Compliance Hub logo" className="h-18 w-18 object-contain" />
+            <span className="text-xl font-bold">compliance hub</span>
           </a>
           <ul className="hidden gap-4 md:flex">
             {navLinks.map((link) => (
@@ -63,8 +65,9 @@ export function Navbar() {
       {isMenuOpen && (
         <div className="cabinet fixed inset-0 z-50 flex min-h-screen flex-col bg-[#f5f5f3] px-6 py-8 md:hidden">
           <div className="flex items-center justify-between">
-            <a href="#home" className="text-xl font-bold" onClick={closeMenu}>
-              compliance hub
+            <a href="#home" className="flex items-center" onClick={closeMenu}>
+              <img src={logo} alt="Compliance Hub logo" className="h-12 w-12 object-contain" />
+              <span className="text-xl font-bold">compliance hub</span>
             </a>
             <button
               type="button"
