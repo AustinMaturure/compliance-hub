@@ -16,36 +16,11 @@ export function Credentials() {
           Aligned With Industry Standards
         </h2>
 
-        <div className="relative min-w-0 md:hidden">
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-8 bg-linear-to-r from-(--bg) to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-8 bg-linear-to-l from-(--bg) to-transparent" />
-          <div className="credentials-scroll">
-            <div className="credentials-scroll-track">
-              {[0, 1].map((group) => (
-                <div className="credentials-scroll-group" key={group} aria-hidden={group === 1}>
-                  {logos.map((logo) => (
-                    <div
-                      key={`${logo.alt}-${group}`}
-                      className="credentials-scroll-item"
-                    >
-                      <img
-                        src={logo.src}
-                        alt={logo.alt}
-                      className="credentials-logo h-full w-full object-contain"
-                      />
-                    </div>
-                  ))}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="hidden min-w-0 grid-cols-3 gap-4 md:grid lg:gap-6">
+        <div className="grid min-w-0 grid-cols-1 gap-6 md:grid-cols-3 md:gap-4 lg:gap-6">
           {logos.map((logo) => (
             <div
               key={logo.alt}
-              className="flex h-14 min-w-0 items-center justify-center"
+              className="flex h-16 min-w-0 items-center justify-center"
             >
               <img
                 src={logo.src}
