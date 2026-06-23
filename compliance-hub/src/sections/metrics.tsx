@@ -9,6 +9,8 @@ export function MetricsSection() {
           <img
             src={more}
             alt="Metrics"
+            loading="lazy"
+            decoding="async"
             className="hero-media h-[420px] w-full rounded-lg object-cover md:h-[680px]"
           />
         </div>

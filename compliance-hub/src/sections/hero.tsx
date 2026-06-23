@@ -41,14 +41,14 @@ export function Hero() {
                 Compliance, <br /> Made Simple.
               </h2>
             </div>
-            <div className="public-sans motion-reveal motion-delay-1 w-full max-w-xl flex-1 text-base sm:text-lg lg:w-[55%]">
+            <div className="public-sans motion-reveal motion-delay-1 w-full max-w-xl flex-1 pb-6 text-base sm:pb-0 sm:text-lg lg:w-[55%]">
               <p>
                 Supporting individuals and small businesses with accounting, tax,
                 payroll and compliance services that keep you organised, compliant
                 and on time.
               </p>
             </div>
-            <div className="motion-reveal motion-delay-2 pb-3 sm:pb-4">
+            <div className="motion-reveal motion-delay-2 hidden pb-3 sm:block sm:pb-4">
               <button className="public-sans apple-button rounded-2xl bg-[#395B50] px-5 py-3 text-sm font-medium text-white hover:-translate-y-0.5 hover:bg-[#2f4f45] sm:px-6 sm:py-4 sm:text-base">
                 Get Compliant
               </button>
@@ -58,7 +58,14 @@ export function Hero() {
       </div>
       <div className="mx-auto h-full px-0 pb-12 pt-0 sm:px-4">
         <div className="motion-reveal relative h-full overflow-hidden rounded-none sm:rounded-lg">
-          <img src={heroImg} alt="Hero" className="hero-media h-full w-full object-cover" />
+          <img
+            src={heroImg}
+            alt="Hero"
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+            className="hero-media h-full w-full object-cover"
+          />
           <div className="pointer-events-none absolute inset-0 bg-linear-to-tr from-black/70 via-black/25 to-transparent" />
         </div>
       </div>

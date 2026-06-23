@@ -1,4 +1,4 @@
-import more from '../assets/more-left.webp';
+import more from '../assets/more.webp';
 import { useState } from 'react';
 import type { FormEvent } from 'react';
 
@@ -18,12 +18,14 @@ export function MoreSection() {
   };
 
   return (
-    <section id="contact" className="container mx-auto px-4 py-12">
+    <section id="contact" className="container mx-auto px-4 md:py-12">
       <div className="flex flex-col gap-4 md:flex-row md:items-stretch">
         <div className="motion-reveal flex-1">
           <img
             src={more}
             alt="More"
+            loading="lazy"
+            decoding="async"
             className="h-[420px] w-full rounded-lg object-cover md:h-[680px]"
           />
         </div>

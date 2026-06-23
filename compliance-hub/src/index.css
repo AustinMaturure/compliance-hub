@@ -231,8 +231,14 @@ textarea {
   display: flex;
   width: max-content;
   align-items: center;
-  gap: 1.75rem;
   animation: credentialsFlow 30s linear infinite;
+}
+
+.credentials-scroll-group {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  padding-right: 1.75rem;
 }
 
 .credentials-scroll-item {
@@ -275,6 +281,6 @@ textarea {
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(-50% - 0.875rem));
+    transform: translateX(-50%);
   }
 }

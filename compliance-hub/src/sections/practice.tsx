@@ -43,7 +43,7 @@ export function PracticeSection() {
         ];
 
     return (
-        <section id="services" className="container mx-auto bg-[#395b50]/10 p-4 md:rounded-xl md:p-8">
+        <section id="services" className="container mx-auto bg-[#395b50]/10 p-5 md:rounded-xl md:p-8">
             <div className="mb-8 flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between md:gap-6">
             <h1 className="cabinet motion-reveal w-full text-left text-5xl font-bold sm:text-6xl md:w-[58%] md:text-5xl lg:text-6xl">Our Practice Areas <br /> & Services</h1>
             <p className="motion-reveal motion-delay-1 w-full text-left text-sm font-light leading-relaxed text-gray-700 sm:text-base md:w-[42%]">
