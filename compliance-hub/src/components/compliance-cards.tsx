@@ -36,7 +36,7 @@ export function ComplianceCards() {
 
   return (
     <section className="w-full">
-      <div className="w-full border-y border-neutral-300">
+      <div className="w-full border-y border-neutral-300 cabinet">
         {complianceCards.map((card, index) => (
           <article
             key={card.title}

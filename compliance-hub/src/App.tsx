@@ -47,7 +47,7 @@ function App() {
 
   return (
     <>
-      <section>
+      <section className="cabinet">
         <Navbar />
         <Hero />
 

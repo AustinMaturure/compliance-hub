@@ -41,16 +41,16 @@ export function Credentials() {
           </div>
         </div>
 
-        <div className="hidden w-full grid-cols-3 gap-6 md:grid lg:w-auto lg:gap-6">
+        <div className="hidden min-w-0 grid-cols-3 gap-4 md:grid lg:gap-6">
           {logos.map((logo) => (
             <div
               key={logo.alt}
-              className="flex h-16 items-center justify-center md:w-36"
+              className="flex h-14 min-w-0 items-center justify-center"
             >
               <img
                 src={logo.src}
                 alt={logo.alt}
-                className="credentials-logo h-full w-full object-contain"
+                className="credentials-logo max-h-full max-w-full object-contain"
               />
             </div>
           ))}

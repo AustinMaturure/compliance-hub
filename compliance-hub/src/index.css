@@ -225,16 +225,20 @@ textarea {
 .credentials-scroll {
   overflow: hidden;
   width: 100%;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .credentials-scroll-track {
   display: flex;
   width: max-content;
   align-items: center;
+  -webkit-animation: credentialsFlow 30s linear infinite;
   animation: credentialsFlow 30s linear infinite;
   will-change: transform;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transform: translate3d(0, 0, 0);
+  isolation: isolate;
 }
 
 .credentials-scroll-group {
@@ -277,11 +281,11 @@ textarea {
   }
 }
 
+@-webkit-keyframes credentialsFlow {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
 @keyframes credentialsFlow {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-  to {
-    transform: translate3d(-50%, 0, 0);
-  }
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
 }

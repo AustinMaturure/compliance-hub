@@ -1,4 +1,4 @@
-import more from '../assets/more-left.webp';
+import more from '../assets/sub-1.webp';
 
 
 export function MetricsSection() {
@@ -14,16 +14,15 @@ export function MetricsSection() {
             className="md:hero-media h-[420px] w-full rounded-lg object-cover md:h-[680px]"
           />
         </div>
-        <div className="motion-reveal motion-delay-1 flex flex-1 flex-col justify-between ">
-        <div className="p-4 sticky top-[4rem]">
-  <h2 className="text-6xl font-bold cabinet">
-  Accurate Reporting. Timely Submissions.
-  </h2>
-
-  <p className="mt-3 text-lg text-gray-600 leading-relaxed">
-    Helping businesses and individuals manage their finances with confidence through accurate, reliable accounting services.
-  </p>
-</div>
+        <div className="motion-reveal motion-delay-1 flex min-w-0 flex-1 flex-col justify-between">
+          <div className="sticky top-[4rem] min-w-0 p-4">
+            <h2 className="cabinet text-4xl font-bold md:text-5xl lg:text-6xl">
+              Accurate Reporting. Timely Submissions.
+            </h2>
+            <p className="mt-3 text-lg leading-relaxed text-gray-600">
+              Helping businesses and individuals manage their finances with confidence through accurate, reliable accounting services.
+            </p>
+          </div>
         
         </div>
         

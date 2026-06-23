@@ -1,4 +1,4 @@
-import more from '../assets/more.webp';
+import more from '../assets/contact.webp';
 import { useState } from 'react';
 import type { FormEvent } from 'react';
 
@@ -26,7 +26,7 @@ export function MoreSection() {
             alt="More"
             loading="lazy"
             decoding="async"
-            className="h-[420px] w-full rounded-lg object-cover md:h-[680px]"
+            className="min-h-full w-full rounded-lg object-cover md:h-[680px]"
           />
         </div>
         <div className="motion-reveal motion-delay-1 flex flex-1 flex-col items-center justify-center gap-6 rounded-lg border border-black/10 p-6 md:p-10">

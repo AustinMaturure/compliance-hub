@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import heroImg from '../assets/hero.jpg';
+import heroImg from '../assets/hero.webp';
 
 export function Hero() {
   const [showBanner, setShowBanner] = useState(false);
