@@ -74,6 +74,22 @@ textarea {
   --motion-delay: 320ms;
 }
 
+/* Fade-only on mobile, full slide+fade from sm up */
+.motion-reveal-fade {
+  transform: none;
+}
+.motion-reveal-fade.is-visible {
+  transform: none;
+}
+@media (min-width: 640px) {
+  .motion-reveal-fade {
+    transform: translateY(22px) scale(0.985);
+  }
+  .motion-reveal-fade.is-visible {
+    transform: translateY(0) scale(1);
+  }
+}
+
 .lift-card {
   transition:
     transform 520ms var(--apple-ease),
@@ -288,4 +304,13 @@ textarea {
 @keyframes credentialsFlow {
   from { transform: translate3d(0, 0, 0); }
   to   { transform: translate3d(-50%, 0, 0); }
+}
+
+/* Metrics mobile image zoom */
+.metrics-img {
+  transition: transform 1400ms cubic-bezier(0.22, 1, 0.36, 1);
+  transform: scale(1.08);
+}
+.metrics-img.is-visible {
+  transform: scale(1);
 }

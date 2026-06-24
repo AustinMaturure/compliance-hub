@@ -14,7 +14,7 @@ import whatsappIcon from './assets/computer-icons-whatsapp-whatsapp.png'
 function App() {
   useEffect(() => {
     const animatedElements = Array.from(
-      document.querySelectorAll<HTMLElement>('.motion-reveal')
+      document.querySelectorAll<HTMLElement>('.motion-reveal, .metrics-img')
     );
 
     if (!animatedElements.length) return;

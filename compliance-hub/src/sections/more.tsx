@@ -40,7 +40,7 @@ export function MoreSection() {
             alt="More"
             loading="lazy"
             decoding="async"
-            className="min-h-full w-full rounded-lg object-cover md:h-[680px]"
+            className="min-h-full w-full rounded-lg object-cover md:h-[680px] hidden md:block"
           />
         </div>
         <div className="motion-reveal motion-delay-1 flex flex-1 flex-col items-center justify-center gap-6 rounded-lg border border-black/10 p-6 md:p-10">

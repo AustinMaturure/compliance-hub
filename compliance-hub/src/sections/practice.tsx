@@ -56,21 +56,13 @@ export function PracticeSection() {
     <div
       key={service.title}
       className="motion-reveal lift-card flex h-full flex-col rounded-xl bg-[#fefefe] p-6"
-    > <div>
-
-
-     
-        <div>
-
-      
-      <h2 className="mb-3 text-2xl font-bold leading-tight min-h-[64px] cabinet">
+    >
+      <h2 className="cabinet text-2xl font-bold mb-2 leading-tight md:mb-3 md:min-h-[64px]">
         {service.title}
       </h2>
-
-      <p className="flex-1 text-sm text-gray-600 leading-relaxed">
+      <p className="flex-1 text-sm leading-relaxed text-gray-600">
         {service.description}
-      </p>  </div>
-    </div>
+      </p>
     </div>
   ))}
 </div>

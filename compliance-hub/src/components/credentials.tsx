@@ -1,3 +1,4 @@
+import React from 'react';
 import draftworkxLogo from '../assets/draftworx.png';
 import saipaLogo from '../assets/saipa.png';
 import sarsLogo from '../assets/sars-logo.png';
@@ -16,11 +17,12 @@ export function Credentials() {
           Aligned With Industry Standards
         </h2>
 
-        <div className="grid min-w-0 grid-cols-1 gap-6 md:grid-cols-3 md:gap-4 lg:gap-6">
-          {logos.map((logo) => (
+        <div className="grid min-w-0 grid-cols-1 gap-10 md:grid-cols-3 md:gap-4 lg:gap-6">
+          {logos.map((logo, i) => (
             <div
               key={logo.alt}
-              className="flex h-16 min-w-0 items-center justify-center"
+              className="motion-reveal flex h-16 min-w-0 items-center justify-center"
+              style={{ '--motion-delay': `${i * 120}ms` } as React.CSSProperties}
             >
               <img
                 src={logo.src}
