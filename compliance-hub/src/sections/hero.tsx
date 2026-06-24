@@ -41,7 +41,7 @@ export function Hero() {
                 Compliance <br /> Made Simple.
               </h2>
             </div>
-            <div className="public-sans motion-reveal motion-reveal-fade w-full max-w-xl flex-1 pb-6 text-base sm:pb-0 sm:text-lg lg:w-[55%]">
+            <div className="public-sans motion-reveal motion-reveal-fade motion-reveal-slow w-full max-w-xl flex-1 pb-6 text-base sm:pb-0 sm:text-lg lg:w-[55%]">
               <p>
               Accounting, tax, payroll and compliance services for individuals and small businesses.
               </p>

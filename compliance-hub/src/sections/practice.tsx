@@ -1,3 +1,5 @@
+import React from 'react';
+
 export function PracticeSection() {
     const services = [
         {
@@ -45,17 +47,18 @@ export function PracticeSection() {
     return (
         <section id="services" className="container mx-auto bg-[#395b50]/10 p-5 md:rounded-xl md:p-8">
             <div className="mb-8 flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between md:gap-6">
-            <h1 className="cabinet motion-reveal w-full text-left text-5xl font-bold sm:text-6xl md:w-[58%] md:text-5xl lg:text-6xl">Our Practice Areas <br /> & Services</h1>
+            <h1 className="cabinet motion-reveal w-full text-left text-4xl font-bold sm:text-6xl md:w-[58%] md:text-5xl lg:text-6xl">Our Practice Areas <br /> & Services</h1>
             <p className="motion-reveal motion-delay-1 w-full text-left text-sm font-light leading-relaxed text-gray-700 sm:text-base md:w-[42%]">
   Comprehensive accounting, tax, payroll, and compliance solutions designed to help individuals and businesses stay financially organized and compliant.
 </p>
             </div>
           
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-  {services.map((service) => (
+  {services.map((service, i) => (
     <div
       key={service.title}
-      className="motion-reveal lift-card flex h-full flex-col rounded-xl bg-[#fefefe] p-6"
+      className="motion-reveal motion-reveal-card lift-card flex h-full flex-col rounded-xl bg-[#fefefe] p-6"
+      style={{ '--motion-delay': `${i * 60}ms` } as React.CSSProperties}
     >
       <h2 className="cabinet text-2xl font-bold mb-2 leading-tight md:mb-3 md:min-h-[64px]">
         {service.title}

@@ -21,7 +21,7 @@ export function MetricsSection() {
             <h2 className="motion-reveal motion-reveal-fade cabinet text-3xl font-bold text-white" style={{ '--motion-delay': '300ms' } as React.CSSProperties}>
               Accurate Reporting. Timely Submissions.
             </h2>
-            <p className="motion-reveal motion-reveal-fade mt-2 text-sm leading-relaxed text-white/80" style={{ '--motion-delay': '420ms' } as React.CSSProperties}>
+            <p className="motion-reveal motion-reveal-fade mt-2 text-sm leading-relaxed text-white/80" style={{ '--motion-delay': '300ms' } as React.CSSProperties}>
               Helping businesses and individuals manage their finances with confidence through accurate, reliable accounting services.
             </p>
           </div>
