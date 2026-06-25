@@ -59,6 +59,18 @@ export function Footer() {
           <p className="public-sans text-xs text-white/55">
           © {year} compliance hub. All rights reserved.
           </p>
+          <p className="public-sans text-xs text-white/55">
+          Designed and developed by{" "}
+          <a
+            href="https://austinmaturure.netlify.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition hover:translate-x-0.5 hover:text-white hover:underline hover:scale-105"
+            style={{ textDecoration: "underline #388AD2 1px " }}
+          >
+            ⚡
+          </a>
+        </p>
         </div>
       </div>
     </footer>
