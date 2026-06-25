@@ -18,11 +18,11 @@ export function Hero() {
             : '-translate-y-full opacity-0 pointer-events-none'
         }`}
       >
-        <div className="public-sans bg-[#395B50]/95 px-4 py-2.5 text-white backdrop-blur-sm">
+        <div className="public-sans bg-(--brand)/95 px-4 py-2.5 text-white backdrop-blur-sm">
           <div className="container mx-auto flex flex-col gap-1 text-xs sm:text-sm md:flex-row md:items-center md:justify-between md:gap-4">
             <p className="font-semibold">Tax Season Opens 01 July 2026</p>
             <p className="text-white/90">
-              Need assistance with your Individual Income Tax Return? contact compliance Hub for professional assistance with your SARS submission.
+              Need assistance with your Individual Income Tax Return? contact compliance hub for professional assistance with your SARS submission.
             </p>
             <a
               href="#contact"
@@ -37,9 +37,9 @@ export function Hero() {
         <div className="mx-auto flex h-full w-full max-w-7xl items-end px-6 pb-12 text-white sm:px-10 sm:pb-16 lg:px-16 lg:pb-24">
           <div className="flex w-full flex-col gap-5 lg:gap-6">
             <div className="motion-reveal flex-1">
-              <h2 className="text-4xl leading-[0.95] font-bold sm:text-6xl lg:text-8xl">
+              <h1 className="text-4xl leading-[0.95] font-bold sm:text-6xl lg:text-8xl">
                 Compliance <br /> Made Simple.
-              </h2>
+              </h1>
             </div>
             <div className="public-sans motion-reveal motion-reveal-fade motion-reveal-slow w-full max-w-xl flex-1 pb-6 text-base sm:pb-0 sm:text-lg lg:w-[55%]">
               <p>
@@ -47,7 +47,7 @@ export function Hero() {
               </p>
             </div>
             <div className="motion-reveal motion-delay-2 hidden pb-3 sm:block sm:pb-4">
-              <button className="public-sans apple-button rounded-2xl bg-[#395B50] px-5 py-3 text-sm font-medium text-white hover:-translate-y-0.5 hover:bg-[#2f4f45] sm:px-6 sm:py-4 sm:text-base">
+              <button className="public-sans apple-button rounded-2xl bg-(--brand) px-5 py-3 text-sm font-medium text-white hover:-translate-y-0.5 hover:bg-(--brand-hover) sm:px-6 sm:py-4 sm:text-base">
                 Get Compliant
               </button>
             </div>
@@ -58,7 +58,7 @@ export function Hero() {
         <div className="motion-reveal relative h-full overflow-hidden rounded-none sm:rounded-lg">
           <img
             src={heroImg}
-            alt="Hero"
+            alt="Professional accounting and tax compliance services in South Africa"
             loading="eager"
             decoding="async"
             fetchPriority="high"

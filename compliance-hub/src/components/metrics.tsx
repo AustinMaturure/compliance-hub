@@ -85,13 +85,13 @@ function MetricCard({ title, target, suffix }: MetricItem) {
   return (
     <div
       ref={cardRef}
-      className="motion-reveal lift-card flex items-center justify-between rounded-xl bg-[#395b50]/10 p-6"
+      className="motion-reveal lift-card flex items-center justify-between rounded-xl border border-(--border) bg-(--surface-muted) p-6"
     >
-      <h3 className="cabinet max-w-[65%] text-lg font-semibold leading-snug text-[#1f2d29] md:text-xl">
+      <h3 className="cabinet max-w-[65%] text-lg font-semibold leading-snug text-(--text-subtle) md:text-xl">
         {title}
       </h3>
 
-      <p className="cabinet text-3xl font-bold text-[#395b50] md:text-4xl">
+      <p className="cabinet text-3xl font-bold text-(--brand) md:text-4xl">
         {formatMetricValue()}
       </p>
     </div>

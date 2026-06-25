@@ -15,7 +15,7 @@ const cipcConsequences = [
 export function ComplianceBanner() {
   return (
     <section className="container mx-auto px-4 py-12">
-      <div className="motion-reveal rounded-2xl bg-[#1f1f1f] px-6 py-10 text-white md:px-10">
+      <div className="motion-reveal rounded-2xl bg-(--banner-dark) px-6 py-10 text-white md:px-10">
         <div className="grid gap-8 md:grid-cols-[1fr_1.35fr]">
           <div className="motion-reveal">
             <p className="public-sans text-xs tracking-[0.2em] text-white/60 uppercase">
@@ -30,7 +30,7 @@ export function ComplianceBanner() {
             </p>
           </div>
 
-          <div className="motion-reveal motion-delay-1 grid gap-4 md:grid-cols-2">
+          <div className="motion-reveal motion-delay-1 grid gap-4 md:grid-cols-1 lg:grid-cols-2">
             <article className="lift-card rounded-xl border border-white/20 bg-white/8 p-5">
               <h3 className="cabinet text-xl font-semibold">Tax Non Compliance</h3>
               <p className="public-sans mt-1 text-sm text-white/65">

@@ -10,12 +10,12 @@ export function WhyChooseSection() {
 
   return (
     <section className="container mx-auto px-4 py-10 md:py-14">
-      <div className="motion-reveal flex flex-col gap-6 border-y border-neutral-300 py-6 md:flex-row md:items-center">
+      <div className="motion-reveal flex flex-col gap-6 border-y border-(--border-strong) py-6 md:flex-row md:items-center">
         <div className="motion-reveal text-center md:w-[320px] md:flex-none md:text-left">
-          <p className="public-sans text-xs font-semibold uppercase tracking-[0.16em] text-[#395b50]">
+          <p className="public-sans text-xs font-semibold uppercase tracking-[0.16em] text-(--brand)">
             Why Choose
           </p>
-          <h2 className="cabinet mt-2 text-3xl font-bold leading-tight md:text-5xl">
+          <h2 className="cabinet mt-2 text-3xl font-bold leading-tight text-(--text-h) md:text-5xl">
             compliance hub
           </h2>
         </div>

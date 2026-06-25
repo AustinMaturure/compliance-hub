@@ -1,11 +1,11 @@
 export function ServiceCards() {
   const cardBgClasses = [
-    "bg-violet-50",
-    "bg-sky-50",
-    "bg-emerald-50",
-    "bg-amber-50",
-    "bg-rose-50",
-    "bg-indigo-50",
+    "service-card-tint-1",
+    "service-card-tint-2",
+    "service-card-tint-3",
+    "service-card-tint-4",
+    "service-card-tint-5",
+    "service-card-tint-6",
   ];
 
   const services = [
@@ -50,10 +50,10 @@ export function ServiceCards() {
               {services.map((service, index) => (
                 <div
                   key={`${service.title}-${group}`}
-                  className={`service-card motion-reveal lift-card ${cardBgClasses[index % cardBgClasses.length]} min-h-96 rounded-lg p-8 flex flex-col justify-between`}
+                  className={`service-card motion-reveal lift-card border border-(--border) ${cardBgClasses[index % cardBgClasses.length]} min-h-96 rounded-lg p-8 flex flex-col justify-between`}
                 >
-                  <h3 className="text-2xl font-bold">{service.title}</h3>
-                  <p className="text-gray-600">{service.description}</p>
+                  <h3 className="text-2xl font-bold text-(--text-h)">{service.title}</h3>
+                  <p className="text-(--text-muted)">{service.description}</p>
                 </div>
               ))}
             </div>

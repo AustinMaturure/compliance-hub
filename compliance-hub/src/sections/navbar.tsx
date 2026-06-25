@@ -44,17 +44,17 @@ export function Navbar() {
             onClick={() => setIsMenuOpen((open) => !open)}
           >
             <span
-              className={`block h-0.5 w-5 bg-black transition ${
+              className={`block h-0.5 w-5 bg-(--icon) transition ${
                 isMenuOpen ? 'translate-y-[3px] rotate-45' : '-translate-y-1'
               }`}
             />
             <span
-              className={`absolute block h-0.5 w-5 bg-black transition ${
+              className={`absolute block h-0.5 w-5 bg-(--icon) transition ${
                 isMenuOpen ? 'opacity-0' : 'opacity-100'
               }`}
             />
             <span
-              className={`absolute block h-0.5 w-5 bg-black transition ${
+              className={`absolute block h-0.5 w-5 bg-(--icon) transition ${
                 isMenuOpen ? 'translate-y-[-3px] -rotate-45' : 'translate-y-1'
               }`}
             />
@@ -63,7 +63,7 @@ export function Navbar() {
       </header>
 
       {isMenuOpen && (
-        <div className="cabinet fixed inset-0 z-50 flex min-h-screen flex-col bg-[#f5f5f3] px-6 py-8 md:hidden">
+        <div className="cabinet fixed inset-0 z-50 flex min-h-screen flex-col bg-(--menu-bg) px-6 py-8 md:hidden">
           <div className="flex items-center justify-between">
             <a href="#home" className="flex items-center" onClick={closeMenu}>
               <img src={logo} alt="Compliance Hub logo" className="h-12 w-12 object-contain" />
@@ -72,11 +72,11 @@ export function Navbar() {
             <button
               type="button"
               aria-label="Close menu"
-              className="relative flex h-11 w-11 items-center justify-center rounded-full bg-black text-white"
+              className="relative flex h-11 w-11 items-center justify-center rounded-full bg-(--btn-solid-bg) text-(--btn-solid-text)"
               onClick={closeMenu}
             >
-              <span className="absolute h-0.5 w-5 rotate-45 bg-white" />
-              <span className="absolute h-0.5 w-5 -rotate-45 bg-white" />
+              <span className="absolute h-0.5 w-5 rotate-45 bg-(--btn-solid-text)" />
+              <span className="absolute h-0.5 w-5 -rotate-45 bg-(--btn-solid-text)" />
             </button>
           </div>
 

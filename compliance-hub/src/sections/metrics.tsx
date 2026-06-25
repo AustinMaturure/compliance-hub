@@ -11,7 +11,7 @@ export function MetricsSection() {
         <div className="motion-reveal relative flex-1 overflow-hidden rounded-lg md:hidden">
           <img
             src={more}
-            alt="Metrics"
+            alt="South African accounting firm providing accurate financial reporting"
             loading="lazy"
             decoding="async"
             className="metrics-img h-[420px] w-full object-cover"
@@ -31,7 +31,7 @@ export function MetricsSection() {
         <div className="motion-reveal hidden flex-1 md:block">
           <img
             src={more}
-            alt="Metrics"
+            alt="South African accounting firm providing accurate financial reporting"
             loading="lazy"
             decoding="async"
             className="md:hero-media h-full w-full rounded-lg object-cover md:h-[680px]"
@@ -39,10 +39,10 @@ export function MetricsSection() {
         </div>
         <div className="motion-reveal motion-delay-1 hidden min-w-0 flex-1 flex-col justify-between md:flex">
           <div className="sticky top-16 min-w-0 p-4">
-            <h2 className="cabinet text-4xl font-bold md:text-5xl lg:text-6xl">
+            <h2 className="cabinet text-4xl font-bold text-(--text-h) md:text-5xl lg:text-6xl">
               Accurate Reporting. Timely Submissions.
             </h2>
-            <p className="mt-3 text-lg leading-relaxed text-gray-600">
+            <p className="mt-3 text-lg leading-relaxed text-(--text-muted)">
               Helping businesses and individuals manage their finances with confidence through accurate, reliable accounting services.
             </p>
           </div>

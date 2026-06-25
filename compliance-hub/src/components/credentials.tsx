@@ -13,7 +13,7 @@ export function Credentials() {
   return (
     <section className="container mx-auto px-4 md:py-6">
       <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-        <h2 className="public-sans motion-reveal text-3xl text-center font-bold sm:text-3xl lg:shrink-0 lg:text-4xl">
+        <h2 className="public-sans motion-reveal text-3xl text-center font-bold text-(--text-h) sm:text-3xl lg:shrink-0 lg:text-4xl">
           Aligned With Industry Standards
         </h2>
 

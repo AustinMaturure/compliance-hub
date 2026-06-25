@@ -66,7 +66,7 @@ function App() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with Compliance Hub on WhatsApp"
-      className="fixed right-5 bottom-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-white p-2 shadow-[0_14px_30px_-14px_rgba(0,0,0,0.45)] transition hover:scale-105"
+      className="fixed right-5 bottom-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-(--fab-bg) p-2 shadow-[0_14px_30px_-14px_var(--fab-shadow)] transition hover:scale-105"
     >
       <img
         src={whatsappIcon}

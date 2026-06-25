@@ -37,16 +37,16 @@ export function MoreSection() {
         <div className="motion-reveal flex-1">
           <img
             src={more}
-            alt="More"
+            alt="Contact Compliance Hub for accounting and tax assistance in South Africa"
             loading="lazy"
             decoding="async"
             className="min-h-full w-full rounded-lg object-cover md:h-[680px] hidden md:block"
           />
         </div>
-        <div className="motion-reveal motion-delay-1 flex flex-1 flex-col items-center justify-center gap-6 rounded-lg border border-black/10 p-6 md:p-10">
-          <h1 className="cabinet text-center text-4xl font-bold md:text-6xl">
+        <div className="motion-reveal motion-delay-1 flex flex-1 flex-col items-center justify-center gap-6 rounded-lg border border-(--border) p-6 md:p-10">
+          <h2 className="cabinet text-center text-4xl font-bold text-(--text-h) md:text-6xl">
           Need assistance with your compliance obligations?
-          </h1>
+          </h2>
           <form
             className="flex w-full max-w-md flex-col gap-3"
             onSubmit={handleSubmit}
@@ -56,7 +56,7 @@ export function MoreSection() {
               placeholder="Your name"
               value={name}
               onChange={(event) => setName(event.target.value)}
-              className="rounded-xl border border-black/20 px-4 py-3 text-[16px] outline-none transition focus:border-black"
+              className="rounded-xl border border-(--input-border) bg-(--input-bg) px-4 py-3 text-[16px] text-(--text) outline-none transition focus:border-(--input-focus)"
             />
             <input
               type="email"
@@ -64,7 +64,7 @@ export function MoreSection() {
               required
               value={email}
               onChange={(event) => setEmail(event.target.value)}
-              className="rounded-xl border border-black/20 px-4 py-3 text-[16px] outline-none transition focus:border-black"
+              className="rounded-xl border border-(--input-border) bg-(--input-bg) px-4 py-3 text-[16px] text-(--text) outline-none transition focus:border-(--input-focus)"
             />
             <textarea
               placeholder="How can we help?"
@@ -72,23 +72,23 @@ export function MoreSection() {
               rows={4}
               value={message}
               onChange={(event) => setMessage(event.target.value)}
-              className="resize-none rounded-xl border border-black/20 px-4 py-3 text-[16px] outline-none transition focus:border-black"
+              className="resize-none rounded-xl border border-(--input-border) bg-(--input-bg) px-4 py-3 text-[16px] text-(--text) outline-none transition focus:border-(--input-focus)"
             />
             <button
               type="submit"
               disabled={status === 'sending'}
-              className="apple-button rounded-2xl bg-black px-6 py-4 font-bold text-white hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed"
+              className="apple-button rounded-2xl bg-(--btn-solid-bg) px-6 py-4 font-bold text-(--btn-solid-text) hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed"
             >
               {status === 'sending' ? 'Sending…' : 'Contact us'}
             </button>
 
             {status === 'success' && (
-              <p className="text-center text-sm font-medium text-green-600">
+              <p className="text-center text-sm font-medium text-(--success)">
                 Message sent! We'll be in touch soon.
               </p>
             )}
             {status === 'error' && (
-              <p className="text-center text-sm font-medium text-red-500">
+              <p className="text-center text-sm font-medium text-(--error)">
                 Something went wrong. Please try again.
               </p>
             )}
