@@ -47,7 +47,7 @@ export function PracticeSection() {
     return (
         <section id="services" className="container mx-auto bg-(--surface-muted) p-5 md:rounded-xl md:p-8">
             <div className="mb-8 flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between md:gap-6">
-            <h2 className="cabinet motion-reveal w-full text-left text-4xl font-bold text-(--text-h) sm:text-6xl md:w-[58%] md:text-5xl lg:text-6xl">Our Practice Areas <br /> & Services</h2>
+            <h2 className="cabinet motion-reveal w-full text-left text-4xl font-bold text-(--text-h) sm:text-6xl md:w-[58%] md:text-5xl lg:text-6xl">Practice Areas <br /> & Services</h2>
             <p className="motion-reveal motion-delay-1 w-full text-left text-sm font-light leading-relaxed text-(--text-subtle) sm:text-base md:w-[42%]">
   Comprehensive accounting, tax, payroll, and compliance solutions designed to help individuals and businesses stay financially organized and compliant.
 </p>
