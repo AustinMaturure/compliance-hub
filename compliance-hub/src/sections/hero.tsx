@@ -20,7 +20,7 @@ export function Hero() {
       >
         <div className="public-sans bg-(--brand)/95 px-4 py-2.5 text-white backdrop-blur-sm">
           <div className="container mx-auto flex flex-col gap-1 text-xs sm:text-sm md:flex-row md:items-center md:justify-between md:gap-4">
-            <p className="font-semibold">Tax Season Opens 01 July 2026</p>
+            <p className="font-semibold">Tax Season is Open.</p>
             <p className="text-white/90">
               Need assistance with your Individual Income Tax Return? contact compliance hub for professional assistance with your SARS submission.
             </p>
